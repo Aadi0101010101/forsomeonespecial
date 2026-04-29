@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This makes the background pulse colors */
+        body {
+            background: linear-gradient(270deg, #ffafbd, #ffc3a0, #ffafbd);
+            background-size: 400% 400%;
+            animation: backgroundMove 10s ease infinite;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 100px;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundMove {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+
+        /* This makes the text "pop" in */
+        .header {
+            color: white;
+            font-size: 60px;
+            animation: zoomIn 2s ease-out;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* This makes the balloons float up and down */
+        .balloons {
+            font-size: 100px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">🎉 Happy Birthday, [HER NAME]! 🎂</div>
+    
+    <p style="color: white; font-size: 24px;">[WRITE YOUR OWN MESSAGE HERE]</p>
+
+    <div class="balloons">🎈🎁🎈</div>
+
+</body>
+</html>
